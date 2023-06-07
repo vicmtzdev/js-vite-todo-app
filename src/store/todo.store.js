@@ -44,7 +44,7 @@ const getTodos = (filter = Filters.All) => {
             return state.todos.filter(todo => !todo.done);
 
         default:
-            throw new Error('Option ${filter} is not valid');
+            throw new Error(`Option ${filter} is not valid`);
     }
 
 }
