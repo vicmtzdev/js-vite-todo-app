@@ -303,28 +303,55 @@ body {
 	display: inline;
 }
 
-.filters li a {
+.filters li a.filtro0 {
 	color: inherit;
 	margin: 3px;
 	padding: 3px 7px;
 	text-decoration: none;
 	border: 1px solid transparent;
 	border-radius: 3px;
+	position: absolute;
+	top: -6.5px;
+	left: 130px;
+}
+
+.filters li a.filtro1 {
+	color: inherit;
+	margin: 3px;
+	padding: 3px 7px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	position: absolute;
+	top: -6.5px;
+	left: 190px;
+}
+
+.filters li a.filtro2 {
+	color: inherit;
+	margin: 3px;
+	padding: 3px 7px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+		position: absolute;
+		top: -6.5px;
+		left: 285px;
 }
 
 .filters li a:hover {
-	border-color: rgba(175, 47, 47, 0.1);
+	border-color: #81B0DD;
 }
 
 .filters li a.selected {
-	border-color: rgba(175, 47, 47, 0.2);
+	border-color: #81B0DD;
 }
 
 .clear-completed,
 html .clear-completed:active {
 	float: right;
 	position: relative;
-	line-height: 20px;
+	line-height: 19px;
 	text-decoration: none;
 	cursor: pointer;
 }
