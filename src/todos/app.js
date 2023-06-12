@@ -1,12 +1,14 @@
 import html from './app.html?raw';
 import todoStore, { Filters } from '../store/todo.store';
-import { renderTodos } from './use-cases';
+import { renderTodos, renderPending } from './use-cases';
 
 const ElementIDs = {
    TodoFilters: '.fil',
    TodoList: '.todo-list',
    NewTodoInput: '#new-todo-input',
    ClearCompleted: '.clear-completed',
+   PendingCountLabel: '#pending-count',
+
 }
 
 /**
@@ -20,7 +22,14 @@ export const App = (elementId) => {
 
       const todos = todoStore.getTodos(todoStore.getCurrentFilter());
       renderTodos(ElementIDs.TodoList, todos);
+      updatePendingCount();
    }
+
+
+   const updatePendingCount = () => {
+      renderPending(ElementIDs.PendingCountLabel);
+   }
+
 
    //Cuando la función App() se llama
    (() => {
@@ -119,10 +128,7 @@ export const App = (elementId) => {
 
       });
 
-   })
-
-
-
+   });
 
 
 
